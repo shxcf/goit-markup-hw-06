@@ -40,6 +40,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .list {
   list-style: none;
 }
@@ -974,6 +987,7 @@ body {
 }
 
 .modal-form-item.checkbox {
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -983,15 +997,18 @@ body {
   letter-spacing: 0.03em;
 }
 
-.modal-form-item.checkbox > span {
+.check-item {
   position: relative;
-  margin-right: 8px;
+  margin-right: 7px;
   width: 16px;
   height: 15px;
-  border: 2px solid var(--main-title-color);
+  border: 2px solid var(--second-title-color);
   border-radius: 3px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .checkbox-icon {
@@ -999,7 +1016,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: var(--main-text-color);
+  fill: var(--main-title-color);
   cursor: pointer;
 }
 
